@@ -11,7 +11,9 @@ local e=(identifyexecutor()or""):lower()
 local f,a
 if e:find("volt")or e:find("synapse")or e:find("nexomia")then
  f,a=run_on_actor,getactors()
-elseif e:find("velocity")or e:find("potassium")or e:find("real")then
+elseif e:find("lynx")then
+ f,a=run_on_actor,getdeletedactors()
+elseif e:find("velocity")or e:find("potassium")or e:find("real")or e:find("lucid")or e:find("wave")then
  f,a=run_on_thread,getactorthreads()
 end
 if not f then
